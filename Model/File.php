@@ -18,7 +18,11 @@ class File extends BaseFile
 {
 
     public function getUrl(){
-        return $this->path . '/' . $this->name;
+        return '/' . ltrim($this->path . '/' . $this->name, '/');
+    }
+
+    public function getRelativeUrl(){
+        return ltrim($this->getUrl(), '/');
     }
 
 }

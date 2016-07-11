@@ -21,4 +21,8 @@ class Image extends BaseImage
         return $this->file_id ? $this->getFile()->getUrl() : '';
     }
 
+    public function getRelativeUrl(){
+        return $this->file_id ? $this->getFile()->getRelativeUrl() : '';
+    }
+
 }
