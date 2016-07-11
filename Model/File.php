@@ -17,4 +17,8 @@ use Creonit\MediaBundle\Model\Base\File as BaseFile;
 class File extends BaseFile
 {
 
+    public function getUrl(){
+        return $this->path . '/' . $this->name;
+    }
+
 }

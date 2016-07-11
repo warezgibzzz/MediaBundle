@@ -17,4 +17,8 @@ use Creonit\MediaBundle\Model\Base\Image as BaseImage;
 class Image extends BaseImage
 {
 
+    public function getUrl(){
+        return $this->file_id ? $this->getFile()->getUrl() : '';
+    }
+
 }
