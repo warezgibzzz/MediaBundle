@@ -1,0 +1,44 @@
+config:
+    required: true
+
+database:
+    +:
+        name: default
+        namespace: Creonit\MediaBundle\Model
+        defaultIdMethod: native
+
+    +vendor:
+        type: mysql
+        parameters:
+            Engine: InnoDB
+            Charset: utf8
+
+    +behavior:
+        - auto_add_pk
+
+    file:
+        path: text
+        name: text
+        original_name: text
+        extension: varchar(10)
+        mime: varchar(50)
+        size: int
+
+    image:
+        +behavior:
+            - file
+
+    video:
+        url: text
+
+    gallery:
+        +behavior:
+            - timestampable
+
+    gallery_item:
+        gallery_id: int > gallery.id
+        +behavior:
+            - sortable
+            - image
+            - file
+            - video
