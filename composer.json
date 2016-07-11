@@ -1,0 +1,18 @@
+{
+  "name": "creonit/media-bundle",
+  "keywords": [
+    "creonit",
+    "symfony",
+    "bundle",
+    "media",
+    "image",
+    "video",
+    "gallery"
+  ],
+  "license": "GNU GPLv3",
+  "autoload": {
+    "psr-4": {
+      "Creonit\\MediaBundle\\": ""
+    }
+  }
+}
