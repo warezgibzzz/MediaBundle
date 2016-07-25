@@ -34,7 +34,7 @@ class Video extends BaseVideo
             }
             */
 
-            if(preg_match('/(?:\?v=([\w\d]+)|.be\/([\w\d]+))/i', $this->getUrl(), $match)){
+            if(preg_match('/(?:\?v=([\w\d_-]+)|.be\/([\w\d_-]+))/i', $this->getUrl(), $match)){
                 $src = 'http://www.youtube.com/embed/' . ($match[1] ? $match[1] : $match[2]);
             }else{
                 $src = '';
@@ -48,7 +48,7 @@ class Video extends BaseVideo
     }
 
     public function getPreviewUrl($type = 0){
-        if(preg_match('/(?:\?v=([\w\d]+)|.be\/([\w\d]+))/i', $this->getUrl(), $match)){
+        if(preg_match('/(?:\?v=([\w\d_-]+)|.be\/([\w\d_-]+))/i', $this->getUrl(), $match)){
             return 'http://img.youtube.com/vi/'.($match[1] ? $match[1] : $match[2]).'/'.$type.'.jpg';
         }else{
             return '';
