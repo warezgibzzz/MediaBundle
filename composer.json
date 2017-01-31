@@ -14,5 +14,12 @@
     "psr-4": {
       "Creonit\\MediaBundle\\": ""
     }
+  },
+  "require": {
+    "creonit/propel-image-behavior": "^0.1.0",
+    "creonit/propel-file-behavior": "^0.1.0",
+    "creonit/propel-video-behavior": "^0.1.0",
+    "creonit/propel-gallery-behavior": "^0.1.0",
+	"creonit/propel-schema-converter-bundle": "^0.1.0"
   }
 }
