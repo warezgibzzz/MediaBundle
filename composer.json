@@ -16,7 +16,7 @@
     }
   },
   "require": {
-    "gregwar/image-bundle": "^2.1.3",
+    "gregwar/image-bundle": "^2.2.2",
     "creonit/propel-image-behavior": "^0.1.0",
     "creonit/propel-file-behavior": "^0.1.0",
     "creonit/propel-video-behavior": "^0.1.0",
